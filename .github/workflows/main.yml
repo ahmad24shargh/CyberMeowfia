@@ -35,7 +35,14 @@ jobs:
           #echo "\$\{GITHUB_WORKSPACE\} : ${GITHUB_WORKSPACE}"
           cd ${GITHUB_WORKSPACE}/IonStack/CVE-2026-43499/exploit
           make
-          ls -R
+
+      - name: Upload the build-CVE-2026-43499 dir
+        uses: actions/upload-artifact@main
+        with:
+          name: build-CVE-2026-43499
+          path: ${GITHUB_WORKSPACE}/IonStack/CVE-2026-43499/exploit/build
+          include-hidden-files: true
+          
           
 
 
