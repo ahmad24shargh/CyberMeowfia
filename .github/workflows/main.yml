@@ -1,4 +1,4 @@
-name: CI
+name: CVE-2026-43499
 #permissions: write-all
 env:
   GITHUB_TOKEN: ${{ secrets.PAT_NO_EXPIRE }}
@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: build-CVE-2026-43499
-          path: ${GITHUB_WORKSPACE}/IonStack/CVE-2026-43499/exploit/build
+          path: IonStack/CVE-2026-43499/exploit/build
           include-hidden-files: true
           
           
